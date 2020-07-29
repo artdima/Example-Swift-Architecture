@@ -8,15 +8,9 @@
 
 import UIKit
 
-class EventListViewController: UIViewController {
+class EventListViewController: UIViewController, Storyboard {
     
     var viewModel: EventListViewModel!
-
-    static func instantiate() -> EventListViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let viewController = storyboard.instantiateInitialViewController() as! EventListViewController
-        return viewController
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +27,7 @@ class EventListViewController: UIViewController {
     }
 
     @objc private func tabPlusBarBattom() {
+        
         viewModel.tappedAddEvent()
     }
 }

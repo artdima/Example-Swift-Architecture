@@ -19,6 +19,10 @@
 		2ACE3D6524D02DB000A7CC43 /* EventsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D6324D02DB000A7CC43 /* EventsApp.xcdatamodeld */; };
 		2ACE3D6724D02F4700A7CC43 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */; };
 		32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32522F4624D08E7F00C417DE /* EventListViewModel.swift */; };
+		3278064E24D1823800E64063 /* AddEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278064D24D1823800E64063 /* AddEventCoordinator.swift */; };
+		3278065024D1839E00E64063 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278064F24D1839E00E64063 /* AddEventViewController.swift */; };
+		3278065224D1840F00E64063 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278065124D1840F00E64063 /* AddEventViewModel.swift */; };
+		3278065424D1857100E64063 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278065324D1857100E64063 /* Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		2ACE3D6424D02DB000A7CC43 /* EventsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsApp.xcdatamodel; sourceTree = "<group>"; };
 		2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		32522F4624D08E7F00C417DE /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		3278064D24D1823800E64063 /* AddEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCoordinator.swift; sourceTree = "<group>"; };
+		3278064F24D1839E00E64063 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		3278065124D1840F00E64063 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+		3278065324D1857100E64063 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 		2ACE3D3324CF4FBF00A7CC43 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3278065324D1857100E64063 /* Storyboard.swift */,
 				2ACE3D3124CF4E6C00A7CC43 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
@@ -95,7 +104,7 @@
 			children = (
 				2ACE3D2B24CF213400A7CC43 /* AppCoordinator.swift */,
 				2ACE3D2D24CF236700A7CC43 /* EventListCoordinator.swift */,
-				32522F4624D08E7F00C417DE /* EventListViewModel.swift */,
+				3278064D24D1823800E64063 /* AddEventCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -103,9 +112,28 @@
 		2ACE3D3524CF4FE800A7CC43 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2ACE3D2F24CF240E00A7CC43 /* EventListViewController.swift */,
+				322D414724D1BF4E007C0A53 /* EventList */,
+				322D414624D1BF3A007C0A53 /* AddEvent */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		322D414624D1BF3A007C0A53 /* AddEvent */ = {
+			isa = PBXGroup;
+			children = (
+				3278064F24D1839E00E64063 /* AddEventViewController.swift */,
+				3278065124D1840F00E64063 /* AddEventViewModel.swift */,
+			);
+			path = AddEvent;
+			sourceTree = "<group>";
+		};
+		322D414724D1BF4E007C0A53 /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE3D2F24CF240E00A7CC43 /* EventListViewController.swift */,
+				32522F4624D08E7F00C417DE /* EventListViewModel.swift */,
+			);
+			path = EventList;
 			sourceTree = "<group>";
 		};
 		32522F4824D092BC00C417DE /* CoreData */ = {
@@ -192,8 +220,12 @@
 				2ACE3D2C24CF213400A7CC43 /* AppCoordinator.swift in Sources */,
 				2ACE3D3024CF240E00A7CC43 /* EventListViewController.swift in Sources */,
 				2ACE3D1824CF20D400A7CC43 /* AppDelegate.swift in Sources */,
+				3278065424D1857100E64063 /* Storyboard.swift in Sources */,
 				2ACE3D1A24CF20D400A7CC43 /* SceneDelegate.swift in Sources */,
+				3278065224D1840F00E64063 /* AddEventViewModel.swift in Sources */,
+				3278064E24D1823800E64063 /* AddEventCoordinator.swift in Sources */,
 				2ACE3D2E24CF236700A7CC43 /* EventListCoordinator.swift in Sources */,
+				3278065024D1839E00E64063 /* AddEventViewController.swift in Sources */,
 				32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */,
 				2ACE3D6724D02F4700A7CC43 /* CoreDataManager.swift in Sources */,
 				2ACE3D6524D02DB000A7CC43 /* EventsApp.xcdatamodeld in Sources */,
