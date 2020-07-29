@@ -18,6 +18,7 @@
 		2ACE3D3224CF4E6C00A7CC43 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D3124CF4E6C00A7CC43 /* UIColor+Extension.swift */; };
 		2ACE3D6524D02DB000A7CC43 /* EventsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D6324D02DB000A7CC43 /* EventsApp.xcdatamodeld */; };
 		2ACE3D6724D02F4700A7CC43 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */; };
+		32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32522F4624D08E7F00C417DE /* EventListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2ACE3D3124CF4E6C00A7CC43 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2ACE3D6424D02DB000A7CC43 /* EventsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsApp.xcdatamodel; sourceTree = "<group>"; };
 		2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		32522F4624D08E7F00C417DE /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,14 +71,13 @@
 				2ACE3D3324CF4FBF00A7CC43 /* Extensions */,
 				2ACE3D3524CF4FE800A7CC43 /* Controllers */,
 				2ACE3D3424CF4FD600A7CC43 /* Coordinators */,
+				32522F4824D092BC00C417DE /* CoreData */,
 				2ACE3D1724CF20D400A7CC43 /* AppDelegate.swift */,
 				2ACE3D1924CF20D400A7CC43 /* SceneDelegate.swift */,
 				2ACE3D1D24CF20D400A7CC43 /* Main.storyboard */,
 				2ACE3D2024CF20D500A7CC43 /* Assets.xcassets */,
 				2ACE3D2224CF20D500A7CC43 /* LaunchScreen.storyboard */,
 				2ACE3D2524CF20D500A7CC43 /* Info.plist */,
-				2ACE3D6324D02DB000A7CC43 /* EventsApp.xcdatamodeld */,
-				2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */,
 			);
 			path = MVVMTemplate;
 			sourceTree = "<group>";
@@ -94,6 +95,7 @@
 			children = (
 				2ACE3D2B24CF213400A7CC43 /* AppCoordinator.swift */,
 				2ACE3D2D24CF236700A7CC43 /* EventListCoordinator.swift */,
+				32522F4624D08E7F00C417DE /* EventListViewModel.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -104,6 +106,15 @@
 				2ACE3D2F24CF240E00A7CC43 /* EventListViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		32522F4824D092BC00C417DE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE3D6324D02DB000A7CC43 /* EventsApp.xcdatamodeld */,
+				2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				2ACE3D1824CF20D400A7CC43 /* AppDelegate.swift in Sources */,
 				2ACE3D1A24CF20D400A7CC43 /* SceneDelegate.swift in Sources */,
 				2ACE3D2E24CF236700A7CC43 /* EventListCoordinator.swift in Sources */,
+				32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */,
 				2ACE3D6724D02F4700A7CC43 /* CoreDataManager.swift in Sources */,
 				2ACE3D6524D02DB000A7CC43 /* EventsApp.xcdatamodeld in Sources */,
 			);
@@ -329,13 +341,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57L2GH97SC;
+				DEVELOPMENT_TEAM = 8Q6S7RTHBY;
 				INFOPLIST_FILE = MVVMTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.medyannik.MVVMTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medyannik.MVVMTemplate1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,13 +359,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57L2GH97SC;
+				DEVELOPMENT_TEAM = 8Q6S7RTHBY;
 				INFOPLIST_FILE = MVVMTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.medyannik.MVVMTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medyannik.MVVMTemplate1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

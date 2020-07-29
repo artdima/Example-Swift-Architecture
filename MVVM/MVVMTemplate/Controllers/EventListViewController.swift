@@ -9,6 +9,8 @@
 import UIKit
 
 class EventListViewController: UIViewController {
+    
+    var viewModel: EventListViewModel!
 
     static func instantiate() -> EventListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -26,11 +28,11 @@ class EventListViewController: UIViewController {
         let barButtomItem = UIBarButtonItem(image: plusImage, style: .plain, target: self, action: #selector(tabPlusBarBattom))
         barButtomItem.tintColor = .primacy
         navigationItem.rightBarButtonItem = barButtomItem
-        navigationItem.title = "Events"
+        navigationItem.title = viewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     @objc private func tabPlusBarBattom() {
-        
+        viewModel.tappedAddEvent()
     }
 }
