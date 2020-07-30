@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A9F2E2424D20BC400BAD225 /* TitleSubtitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F2E2324D20BC400BAD225 /* TitleSubtitleCellViewModel.swift */; };
+		2A9F2E2624D20BEF00BAD225 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F2E2524D20BEF00BAD225 /* TitleSubtitleCell.swift */; };
 		2ACE3D1824CF20D400A7CC43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D1724CF20D400A7CC43 /* AppDelegate.swift */; };
 		2ACE3D1A24CF20D400A7CC43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D1924CF20D400A7CC43 /* SceneDelegate.swift */; };
 		2ACE3D1F24CF20D400A7CC43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE3D1D24CF20D400A7CC43 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A9F2E2324D20BC400BAD225 /* TitleSubtitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellViewModel.swift; sourceTree = "<group>"; };
+		2A9F2E2524D20BEF00BAD225 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 		2ACE3D1424CF20D400A7CC43 /* MVVMTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACE3D1724CF20D400A7CC43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ACE3D1924CF20D400A7CC43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A9F2E2724D20C2800BAD225 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A9F2E2324D20BC400BAD225 /* TitleSubtitleCellViewModel.swift */,
+				2A9F2E2524D20BEF00BAD225 /* TitleSubtitleCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2ACE3D0B24CF20D400A7CC43 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,7 @@
 		2ACE3D1624CF20D400A7CC43 /* MVVMTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				2A9F2E2724D20C2800BAD225 /* Views */,
 				2ACE3D3324CF4FBF00A7CC43 /* Extensions */,
 				2ACE3D3524CF4FE800A7CC43 /* Controllers */,
 				2ACE3D3424CF4FD600A7CC43 /* Coordinators */,
@@ -216,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9F2E2424D20BC400BAD225 /* TitleSubtitleCellViewModel.swift in Sources */,
 				2ACE3D3224CF4E6C00A7CC43 /* UIColor+Extension.swift in Sources */,
 				2ACE3D2C24CF213400A7CC43 /* AppCoordinator.swift in Sources */,
 				2ACE3D3024CF240E00A7CC43 /* EventListViewController.swift in Sources */,
@@ -227,6 +242,7 @@
 				2ACE3D2E24CF236700A7CC43 /* EventListCoordinator.swift in Sources */,
 				3278065024D1839E00E64063 /* AddEventViewController.swift in Sources */,
 				32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */,
+				2A9F2E2624D20BEF00BAD225 /* TitleSubtitleCell.swift in Sources */,
 				2ACE3D6724D02F4700A7CC43 /* CoreDataManager.swift in Sources */,
 				2ACE3D6524D02DB000A7CC43 /* EventsApp.xcdatamodeld in Sources */,
 			);
