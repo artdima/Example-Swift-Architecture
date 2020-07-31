@@ -39,4 +39,8 @@ final class AddEventViewModel {
         return cells[indecPath.row]
     }
     
+    func tappedDone() {
+        print("Tapped done")
+    }
+    
 }

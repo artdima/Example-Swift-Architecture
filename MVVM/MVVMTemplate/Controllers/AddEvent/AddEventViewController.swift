@@ -21,13 +21,16 @@ class AddEventViewController: UIViewController, Storyboard {
         viewModel.onUpdate = { [weak self] in
             self?.tableView.reloadData()
         }
-        
         viewModel.viewDidLoad()
         
-        let rightBarButtom = UIBarButtonItem(title: "Done", style: .done, target: nil, action: #selector(doneTapped))
+        let rightBarButtom = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTapped))
         navigationItem.rightBarButtonItem = rightBarButtom
-        navigationController?.title = viewModel.title
         
+        //Set Navigation Bar large titles
+        navigationItem.title = viewModel.title
+        navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.setContentOffset(.init(x: 0, y: -2), animated: false)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -36,7 +39,7 @@ class AddEventViewController: UIViewController, Storyboard {
     }
     
     @objc private func doneTapped() {
-        
+        viewModel.tappedDone()
     }
 }
 

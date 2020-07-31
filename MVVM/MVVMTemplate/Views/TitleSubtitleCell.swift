@@ -12,6 +12,7 @@ final class TitleSubtitleCell: UITableViewCell {
     private var titleLabel = UILabel()
     private var subtitleTextField = UITextField()
     private var verticalStackView = UIStackView()
+    private let padding: CGFloat = 15
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -48,10 +49,10 @@ final class TitleSubtitleCell: UITableViewCell {
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor)
+            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            verticalStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: padding),
+            verticalStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: padding),
+            verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding)
         ])
     }
 }
