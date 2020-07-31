@@ -22,8 +22,8 @@ final class AddEventViewModel {
     private(set) var cells: [AddEventViewModel.Cell] = []
     
     func viewDidLoad() {
-        self.cells.append(.titleSubtitle(TitleSubtitleCellViewModel(title: "Name", subtitle: "", placeholder: "Add here..")))
-        self.cells.append(.titleSubtitle(TitleSubtitleCellViewModel(title: "Name", subtitle: "", placeholder: "Add here..")))
+        self.cells.append(.titleSubtitle(TitleSubtitleCellViewModel(title: "Name", subtitle: "", placeholder: "Add a name", type: .text)))
+        self.cells.append(.titleSubtitle(TitleSubtitleCellViewModel(title: "Date", subtitle: "", placeholder: "Select a date", type: .date)))
         onUpdate()
     }
     
@@ -41,6 +41,15 @@ final class AddEventViewModel {
     
     func tappedDone() {
         print("Tapped done")
+    }
+    
+    func updateCell(for indexPath: IndexPath, subtitle: String) {
+        switch cells[indexPath.row] {
+        case .titleSubtitle(let titleSubtitleViewModel):
+            titleSubtitleViewModel.update(subtitle)
+        case .titleImage:
+            break
+        }
     }
     
 }

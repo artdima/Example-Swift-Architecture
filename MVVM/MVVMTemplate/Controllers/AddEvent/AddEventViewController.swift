@@ -17,11 +17,16 @@ class AddEventViewController: UIViewController, Storyboard {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.register(TitleSubtitleCell.self, forCellReuseIdentifier: "TitleSubtitleCell")
         viewModel.onUpdate = { [weak self] in
             self?.tableView.reloadData()
         }
         viewModel.viewDidLoad()
+        setupView()
+    }
+    
+    private func setupView() {
+        tableView.register(TitleSubtitleCell.self, forCellReuseIdentifier: "TitleSubtitleCell")
+        tableView.tableFooterView = UIView()
         
         let rightBarButtom = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneTapped))
         navigationItem.rightBarButtonItem = rightBarButtom
@@ -43,6 +48,21 @@ class AddEventViewController: UIViewController, Storyboard {
     }
 }
 
+//MARK: - UITextFieldDelegate
+extension AddEventViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let currentText = textField.text else { return false}
+        let text = currentText + string
+        
+        let point = textField.convert(textField.bounds.origin, to: tableView)
+        if let indexPath = tableView.indexPathForRow(at: point) {
+            viewModel.updateCell(for: indexPath, subtitle: text)
+        }
+        return true
+    }
+}
+
+//MARK: - UITableViewDataSource
 extension AddEventViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows()
@@ -54,6 +74,7 @@ extension AddEventViewController: UITableViewDataSource {
         case .titleSubtitle(let titleSubtitleCellViewModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: "TitleSubtitleCell", for: indexPath) as! TitleSubtitleCell
             cell.update(with: titleSubtitleCellViewModel)
+            cell.subtitleTextField.delegate = self
             return cell
         default:
             return UITableViewCell()
