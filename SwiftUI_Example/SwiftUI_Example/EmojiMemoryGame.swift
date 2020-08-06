@@ -9,11 +9,12 @@
 import Foundation
 
 class EmojiMemoryGame {
-    private var model: MemoryGame<String> = createMemoryGame()
+    private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     static func createMemoryGame() -> MemoryGame<String> {
-        return MemoryGame(numberOfPairsOfCards: 2) { index in
-            return "🏈"
+        let emojis = ["🏈", "⚽️", "⚾️"]
+        return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in
+            return emojis[pairIndex]
         }
     }
     

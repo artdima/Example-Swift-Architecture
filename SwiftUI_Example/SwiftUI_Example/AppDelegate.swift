@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Test
+//  SwiftUI_Example
 //
-//  Created by Medyannik Dmitri on 24.07.2020.
-//  Copyright © 2020 Medyannik Dmitri. All rights reserved.
+//  Created by Medyannik Dima on 05.08.2020.
+//  Copyright © 2020 Medyannik Dima. All rights reserved.
 //
 
 import UIKit
