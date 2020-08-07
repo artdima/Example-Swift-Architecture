@@ -25,6 +25,7 @@
 		3278065024D1839E00E64063 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278064F24D1839E00E64063 /* AddEventViewController.swift */; };
 		3278065224D1840F00E64063 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278065124D1840F00E64063 /* AddEventViewModel.swift */; };
 		3278065424D1857100E64063 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278065324D1857100E64063 /* Storyboard.swift */; };
+		32A61AA124DC80C5001E0462 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A61AA024DC80C5001E0462 /* ImagePickerCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		3278064F24D1839E00E64063 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		3278065124D1840F00E64063 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
 		3278065324D1857100E64063 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		32A61AA024DC80C5001E0462 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				2ACE3D2B24CF213400A7CC43 /* AppCoordinator.swift */,
 				2ACE3D2D24CF236700A7CC43 /* EventListCoordinator.swift */,
 				3278064D24D1823800E64063 /* AddEventCoordinator.swift */,
+				32A61AA024DC80C5001E0462 /* ImagePickerCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				2ACE3D2E24CF236700A7CC43 /* EventListCoordinator.swift in Sources */,
 				3278065024D1839E00E64063 /* AddEventViewController.swift in Sources */,
 				32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */,
+				32A61AA124DC80C5001E0462 /* ImagePickerCoordinator.swift in Sources */,
 				2A9F2E2624D20BEF00BAD225 /* TitleSubtitleCell.swift in Sources */,
 				2ACE3D6724D02F4700A7CC43 /* CoreDataManager.swift in Sources */,
 				2ACE3D6524D02DB000A7CC43 /* EventsApp.xcdatamodeld in Sources */,

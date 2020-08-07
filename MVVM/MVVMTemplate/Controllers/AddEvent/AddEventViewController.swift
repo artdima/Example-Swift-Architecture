@@ -17,6 +17,7 @@ class AddEventViewController: UIViewController, Storyboard {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         viewModel.onUpdate = { [weak self] in
             self?.tableView.reloadData()
         }
@@ -76,8 +77,14 @@ extension AddEventViewController: UITableViewDataSource {
             cell.update(with: titleSubtitleCellViewModel)
             cell.subtitleTextField.delegate = self
             return cell
-        default:
-            return UITableViewCell()
         }
+    }
+}
+
+//MARK: - UITableViewDelegate
+extension AddEventViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
