@@ -20,10 +20,17 @@ final class AddEventViewModel {
     let title = "Add"
     private(set) var cells: [AddEventViewModel.Cell] = []
     
+    private var nameCellViewModel: TitleSubtitleCellViewModel?
+    private var dateCellViewModel: TitleSubtitleCellViewModel?
+    private var backgroundImageCellViewModel: TitleSubtitleCellViewModel?
+    private var cellBuilder: EventsCellBuilder
+    
+    init(cellBuilder: EventsCellBuilder) {
+        self.cellBuilder = cellBuilder
+    }
+    
     func viewDidLoad() {
-        self.cells.append(.titleSubtitle(TitleSubtitleCellViewModel(title: "Name", subtitle: "", placeholder: "Add a name", type: .text, onCellUpdate: {})))
-        self.cells.append(.titleSubtitle(TitleSubtitleCellViewModel(title: "Date", subtitle: "", placeholder: "Select a date", type: .date, onCellUpdate: { [weak self] in self?.onUpdate() })))
-        self.cells.append(.titleSubtitle(TitleSubtitleCellViewModel(title: "Image", subtitle: "", placeholder: "", type: .image, onCellUpdate: { [weak self] in self?.onUpdate() })))
+        setupCells()
         onUpdate()
     }
     
@@ -55,9 +62,22 @@ final class AddEventViewModel {
         case .titleSubtitle(let titleSubtitleCellViewModel):
             guard titleSubtitleCellViewModel.type == .image else { return }
             coordinator?.showImagePicker { image in
-                print("Image yes")
+                titleSubtitleCellViewModel.update(image)
             }
         }
     }
     
+}
+
+private extension AddEventViewModel {
+    private func setupCells() {
+        nameCellViewModel = 
+        dateCellViewModel = 
+        backgroundImageCellViewModel = 
+        
+        [nameCellViewModel, dateCellViewModel, backgroundImageCellViewModel].forEach {
+            guard let cell = $0 else { return }
+            self.cells.append(.titleSubtitle(cell))
+        }
+    }
 }

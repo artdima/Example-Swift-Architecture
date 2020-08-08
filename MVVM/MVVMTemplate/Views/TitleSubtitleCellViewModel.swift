@@ -6,7 +6,7 @@
 //  Copyright © 2020 Medyannik Dmitri. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class TitleSubtitleCellViewModel {
     
@@ -20,19 +20,20 @@ final class TitleSubtitleCellViewModel {
     private(set) var subtitle: String
     let placeholder: String
     let type: CellType
+    private(set) var image: UIImage?
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyy"
         return dateFormatter
     }()
-    private(set) var onUpdate: () -> Void = {}
+    private(set) var onCellUpdate: () -> Void = {}
     
     init(title: String, subtitle: String, placeholder: String, type: CellType, onCellUpdate: @escaping () -> Void) {
         self.title = title
         self.subtitle = subtitle
         self.placeholder = placeholder
         self.type = type
-        self.onUpdate = onCellUpdate
+        self.onCellUpdate = onCellUpdate
     }
     
     func update(_ subtitle: String) {
@@ -42,6 +43,11 @@ final class TitleSubtitleCellViewModel {
     func update(_ date: Date) {
         let dateString = dateFormatter.string(from: date)
         self.subtitle = dateString
-        onUpdate()
+        onCellUpdate()
+    }
+    
+    func update(_ image: UIImage) {
+        self.image = image
+        onCellUpdate()
     }
 }

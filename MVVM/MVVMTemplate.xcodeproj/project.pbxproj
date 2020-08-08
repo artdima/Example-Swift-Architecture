@@ -20,6 +20,7 @@
 		2ACE3D3224CF4E6C00A7CC43 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D3124CF4E6C00A7CC43 /* UIColor+Extension.swift */; };
 		2ACE3D6524D02DB000A7CC43 /* EventsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D6324D02DB000A7CC43 /* EventsApp.xcdatamodeld */; };
 		2ACE3D6724D02F4700A7CC43 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */; };
+		3217B95B24DD96D60052A62C /* EventsCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217B95A24DD96D60052A62C /* EventsCellBuilder.swift */; };
 		32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32522F4624D08E7F00C417DE /* EventListViewModel.swift */; };
 		3278064E24D1823800E64063 /* AddEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278064D24D1823800E64063 /* AddEventCoordinator.swift */; };
 		3278065024D1839E00E64063 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278064F24D1839E00E64063 /* AddEventViewController.swift */; };
@@ -44,6 +45,7 @@
 		2ACE3D3124CF4E6C00A7CC43 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2ACE3D6424D02DB000A7CC43 /* EventsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsApp.xcdatamodel; sourceTree = "<group>"; };
 		2ACE3D6624D02F4700A7CC43 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3217B95A24DD96D60052A62C /* EventsCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCellBuilder.swift; sourceTree = "<group>"; };
 		32522F4624D08E7F00C417DE /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		3278064D24D1823800E64063 /* AddEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCoordinator.swift; sourceTree = "<group>"; };
 		3278064F24D1839E00E64063 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				2A9F2E2324D20BC400BAD225 /* TitleSubtitleCellViewModel.swift */,
 				2A9F2E2524D20BEF00BAD225 /* TitleSubtitleCell.swift */,
+				3217B95A24DD96D60052A62C /* EventsCellBuilder.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				3278064E24D1823800E64063 /* AddEventCoordinator.swift in Sources */,
 				2ACE3D2E24CF236700A7CC43 /* EventListCoordinator.swift in Sources */,
 				3278065024D1839E00E64063 /* AddEventViewController.swift in Sources */,
+				3217B95B24DD96D60052A62C /* EventsCellBuilder.swift in Sources */,
 				32522F4724D08E7F00C417DE /* EventListViewModel.swift in Sources */,
 				32A61AA124DC80C5001E0462 /* ImagePickerCoordinator.swift in Sources */,
 				2A9F2E2624D20BEF00BAD225 /* TitleSubtitleCell.swift in Sources */,

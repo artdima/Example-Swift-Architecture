@@ -46,5 +46,14 @@ final class AddEventCoordinator: Coordinator {
     
     func didFinishPicking(_ image: UIImage) {
         completion(image)
+        modalNavigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func childDidFinish(_ childCoordinator: Coordinator) {
+        if let index = childCoordinators.firstIndex(where: { (coordinator: Coordinator) -> Bool in
+            return childCoordinator === coordinator
+        }) {
+            childCoordinators.remove(at: index)
+        }
     }
 }
